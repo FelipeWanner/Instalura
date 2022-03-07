@@ -1,4 +1,3 @@
-import React from 'react'
 import { Logo } from '../../../theme/Logo'
 import { Button } from '../Button'
 import { MenuLI, MenuUL, MenuWrapper } from './styles/MenuWrapper'
