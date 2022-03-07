@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const MenuWrapper = styled.nav`
-    fotn-family: 'Rubik', sans-serif;
+    font-family: 'Rubik', sans-serif;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -22,7 +22,7 @@ MenuWrapper.centralSide = styled.div`
     margin: 0;
     order: 3;
     width: 100%;
-    list_style: none;
+    list-style: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -34,7 +34,7 @@ MenuWrapper.centralSide = styled.div`
         text-align: center;
         display: block;
         text-decoration: nome;
-        color #88989E;
+        color: #88989E;
         transition: 200ms ease-in-out;
         &:hover,
         &:focus {
@@ -53,3 +53,13 @@ MenuWrapper.RightSide = styled.div`
     order: 2;
     justify-content: flex-end;
 `;
+
+export const MenuUL = styled.ul`
+  list-style-type: none;
+  display: flex;
+  
+`
+
+export const MenuLI = styled.li`
+
+`
