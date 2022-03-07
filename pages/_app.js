@@ -8,13 +8,6 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const theme = {
-  colors: {
-    primary: '#FB7B6B',
-    secondary: '#D7385E'
-  },
-}
-
 export default function App({ Component, pageProps }) {
   return (
     <>
