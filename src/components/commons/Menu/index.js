@@ -36,10 +36,10 @@ export default function Menu(){
         </MenuUL>
       </MenuWrapper.centralSide>
       <MenuWrapper.RightSide>
-        <Button ghost>
+        <Button ghost variant="secondary.main">
           entrar
         </Button>
-        <Button>
+        <Button variant="primary.main">
           cadastrar
         </Button>
       </MenuWrapper.RightSide>

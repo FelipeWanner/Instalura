@@ -1,16 +1,20 @@
 import styled, { css } from "styled-components"
+import get from "lodash/get"
+import theme from "../../../theme"
 
 const ButtonGhost = css` //a funcao "css" serve apenas para mudar o highlight e o codigo ficar mais facil
   background: transparent;
   color: ${(props)=>{
-    return props.theme.colors.secondary
+    return get(props.theme, `colors.${props.variant}.color`)
   }};
 `
 
 const ButtonDefault = css` 
-  color: white;
+  color: ${(props)=>{
+    return get(props.theme, `colors.${props.variant}.contrastText`)
+  }};
   background-color: ${(props)=>{
-    return props.theme.colors.primary
+    return get(props.theme, `colors.${props.variant}.color`)
   }};
 `
 
@@ -20,13 +24,14 @@ export const Button = styled.button `
   padding: 12px 26px;
   font-weight: bold;
   opacity: 1;
-  border-radius: 8px;
   ${(props)=>{
     if(props.ghost){
       return ButtonGhost
     }
     return ButtonDefault
   }}
+  border-radius: ${({theme})=> theme.borderRadius};
+  transition: ${({theme})=> theme.transition};
   &:hover,
   &:focus {
       opacity: .5;
