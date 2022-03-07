@@ -2,12 +2,16 @@ import styled, { css } from "styled-components"
 
 const ButtonGhost = css` //a funcao "css" serve apenas para mudar o highlight e o codigo ficar mais facil
   background: transparent;
-  color: #FB7B6B;
+  color: ${(props)=>{
+    return props.theme.colors.secondary
+  }};
 `
 
 const ButtonDefault = css` 
   color: white;
-  background-color: #D7385E;
+  background-color: ${(props)=>{
+    return props.theme.colors.primary
+  }};
 `
 
 export const Button = styled.button `
