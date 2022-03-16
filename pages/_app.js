@@ -1,3 +1,4 @@
+import { get } from 'lodash'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import theme from '../src/theme'
 
@@ -6,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: black;
   }
 `
 

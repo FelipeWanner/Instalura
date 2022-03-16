@@ -36,7 +36,10 @@ const colors = {
     },
   },
   modes: {
-    dark: {},
+    dark: {
+      color: '#FFFFFF',
+      background: '#070C0E',
+    },
   },
 };
 

@@ -2,7 +2,7 @@ import styled, { css } from "styled-components"
 import get from "lodash/get"
 import theme from "../../../theme"
 
-const ButtonGhost = css` //a funcao "css" serve apenas para mudar o highlight e o codigo ficar mais facil
+const ButtonGhost = css` //a funcao "css" serve apenas para mudar o highlight e o codigo ficar mais facil de ler
   background: transparent;
   color: ${(props)=>{
     return get(props.theme, `colors.${props.variant}.color`)

@@ -1,8 +1,13 @@
 import { Logo } from '../../../theme/Logo'
 import { Button } from '../Button'
 import { MenuLI, MenuUL, MenuWrapper } from './styles/MenuWrapper'
+import {LogoThemeLight} from '../../../theme/LogoThemeLight'
+import {LogoThemeDark} from '../../../theme/LogoThemeDark'
+import { useState } from 'react'
 
 export default function Menu(){
+  const [icone, ToggleIcone] = useState(false)
+
   const links = [
     {
       texto: 'Home',
@@ -35,6 +40,10 @@ export default function Menu(){
         </MenuUL>
       </MenuWrapper.centralSide>
       <MenuWrapper.RightSide>
+        <Button ghost onClick={() => ToggleIcone(!icone)}>
+          {icone ? <LogoThemeLight /> : <LogoThemeDark />}  
+        </Button>
+
         <Button ghost variant="secondary.main">
           entrar
         </Button>
