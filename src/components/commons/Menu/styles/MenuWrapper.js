@@ -53,13 +53,3 @@ MenuWrapper.RightSide = styled.div`
     order: 2;
     justify-content: flex-end;
 `;
-
-export const MenuUL = styled.ul`
-  list-style-type: none;
-  display: flex;
-  
-`
-
-export const MenuLI = styled.li`
-
-`
