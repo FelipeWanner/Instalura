@@ -1,6 +1,6 @@
 import { Logo } from '../../../theme/Logo'
 import { Button } from '../Button'
-import { MenuLI, MenuUL, MenuWrapper } from './styles/MenuWrapper'
+import { MenuWrapper } from './styles/MenuWrapper'
 import {LogoThemeLight} from '../../../theme/LogoThemeLight'
 import {LogoThemeDark} from '../../../theme/LogoThemeDark'
 import { useState } from 'react'
@@ -32,9 +32,9 @@ export default function Menu(){
       <MenuWrapper.centralSide>    
         {links.map((link)=>{
           return(
-            <MenuLI key={link.texto}>
+            <li key={link.texto}>
               <Text tag="a" variant="smallestException" href={link.url}>{link.texto}</Text>
-            </MenuLI>
+            </li>
           )
         })}     
       </MenuWrapper.centralSide>
