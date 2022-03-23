@@ -2,6 +2,7 @@ import styled, { css } from "styled-components"
 import get from "lodash/get"
 import theme from "../../../theme"
 import { TextStyleVariantsMap } from "../../foundation/Text"
+import { breakpointsMedia } from "../../../theme/utils/breakpointsMedia"
 
 const ButtonGhost = css` //a funcao "css" serve apenas para mudar o highlight e o codigo ficar mais facil de ler
   background: transparent;
@@ -32,10 +33,22 @@ export const Button = styled.button `
     return ButtonDefault
   }}
   border-radius: ${({theme})=> theme.borderRadius};
-  ${TextStyleVariantsMap.smallestException}
+
   transition: ${({theme})=> theme.transition};
   &:hover,
   &:focus {
       opacity: .5;
   }
+
+  ${breakpointsMedia({
+    xs: css`
+      ${TextStyleVariantsMap.smallestException}
+    `,
+    md: css`
+      ${TextStyleVariantsMap.paragraph1}
+    `,
+    
+  })}
+
 `
+
