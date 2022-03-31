@@ -39,9 +39,12 @@ export default function Menu(){
         })}     
       </MenuWrapper.centralSide>
       <MenuWrapper.RightSide>
-        <Button ghost onClick={() => ToggleIcone(!icone)}>
+        
+        {/* BOTAO PARA TROCA DE TEMA, AINDA SEM A FUNCIONALIDADE */}
+
+        {/* <Button ghost onClick={() => ToggleIcone(!icone)}>
           {icone ? <LogoThemeLight /> : <LogoThemeDark />}  
-        </Button>
+        </Button> */}
 
         <Button ghost variant="secondary.main">
           entrar
