@@ -1,6 +1,7 @@
 import react from "react";
 import styled, {css} from "styled-components";
 import propTypes from "prop-types";
+import propToStyle from "../../../theme/utils/propToStyle";
 
 export const TextStyleVariantsMap = {
   paragraph1: css`
@@ -18,13 +19,15 @@ export const TextStyleVariantsMap = {
 
 const TextBase = styled.span`
   ${(props) => TextStyleVariantsMap[props.variant]}
+  ${propToStyle("textAlign")}
 `
 
-export default function Text({tag, variant, children}){
+export default function Text({tag, variant, children, ...props}){
   return(
     <TextBase
       variant={variant}
       as={tag}  //as dentro de um componente styled, muda a tag pré definida (que nesse caso é o span da linha 4)
+      {...props}
     >
       {children}
     </TextBase>

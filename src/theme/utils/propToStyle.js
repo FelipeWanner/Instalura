@@ -1,5 +1,5 @@
 import { breakpointsMedia } from "./breakpointsMedia"
-// funcao que converte um "propName" que nós passamos. E basicamente ele faz o retorno de um objeto aonde propName é 
+// funcao que converte um "propName" que nós passamos. Ela basicamente ele faz o retorno de um objeto aonde propName é 
 // uma propriedade css (textAlign, border, margin, etc), e "props" tem todas as propriedades que passamos quando chamamos a
 // funcao "Text" (que chama "textBase", onde "propToStyle" é chamado)
 export default function propToStyle(propName) {

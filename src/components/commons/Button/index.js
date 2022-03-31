@@ -3,6 +3,7 @@ import get from "lodash/get"
 import theme from "../../../theme"
 import { TextStyleVariantsMap } from "../../foundation/Text"
 import { breakpointsMedia } from "../../../theme/utils/breakpointsMedia"
+import propToStyle from "../../../theme/utils/propToStyle"
 
 const ButtonGhost = css` //a funcao "css" serve apenas para mudar o highlight e o codigo ficar mais facil de ler
   background: transparent;
@@ -20,7 +21,7 @@ const ButtonDefault = css`
   }};
 `
 
-export const Button = styled.button `
+export const Button = styled.button`
   border: 0;
   cursor: pointer;
   padding: 12px 26px;
@@ -50,5 +51,7 @@ export const Button = styled.button `
     
   })}
 
+  ${propToStyle('margin')}
+  ${propToStyle('display')}
 `
 
